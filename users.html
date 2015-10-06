@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DropShark | Drupal Analytics and Insights</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/dropshark.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="sidebar">
+        <div id="persona">
+            <div class="avatar"><i class="fa fa-user fa-lg"></i> abcuser</div>
+            <ul class="actions">
+                <li></li>
+            </ul>
+        </div>
+
+        <form id="site-jump">
+            <label> Site:</label>
+            <select>
+                <option>MySite1.com</option>
+                <option>MySite2.com</option>
+                <option>MySite3.com</option>
+                <option>Drupal.org</option>
+            </select>
+        </form>
+
+        <div>
+            <h3>Pages</h3>
+            <ul>
+                <li><a href="index.html">Content</a></li>
+                <li><a href="users.html" class="active">Users</a></li>
+                <li><a href="env.html">Environment</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+
+        <div id="navbar">
+
+            <div id="site-name">
+                <h1>DropShark</h1>
+            </div>
+
+            <div class="buttons">
+                <ul class="buttons">
+                    <li><a class="off" href="#"><i class="fa fa-power-off fa-3x"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="content" class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="pane">
+                        <h3 class="pane-title">Roles</h3>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <table class="table">
+                                    <tr>
+                                        <th>Role</th>
+                                        <th>Users</th>
+                                        <th>%</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Editor</td>
+                                        <td>48</td>
+                                        <td>16.7%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Administrator</td>
+                                        <td>6</td>
+                                        <td>2.1%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total</td>
+                                        <td>288</td>
+                                        <td>100%</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-sm-6">
+                                Big fancy chart here.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="pane">
+                        <h3 class="pane-title">Sessions</h3>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label>Current:</label> 26 <a href="#">Refresh</a>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Max:</label> 178 (10-6-2015 9:29am)
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                Big fancy chart here.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
