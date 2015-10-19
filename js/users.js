@@ -3,8 +3,29 @@
     google.setOnLoadCallback(drawCharts);
 
     function drawCharts() {
+        drawUsers();
         drawRoles();
         drawSessions();
+    }
+
+    function drawUsers() {
+        var data = google.visualization.arrayToDataTable([
+            ['Name', 'Value'],
+            ['Total', 288],
+            ['Active', 182],
+            ['Disabled', 106],
+            ['New', 38],
+            ['Never Logged In', 16],
+        ]);
+
+        var options = {
+            legend: { position: 'none' }
+        };
+
+        var element = $('#users-chart')[0];
+        var chart = new google.visualization.BarChart(element);
+
+        chart.draw(data, options);
     }
 
     function drawRoles() {
