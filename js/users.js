@@ -1,10 +1,10 @@
 (function ($) {
 
-    google.setOnLoadCallbacks(drawChart);
+    google.setOnLoadCallback(drawCharts);
 
     function drawCharts() {
         var data = google.visualization.arrayToDataTable([
-            ['Year', 'Total', 'Editor', 'Admin'],
+            ['Date', 'Total', 'Editor', 'Admin'],
             ['9/17', 100, 10, 3],
             ['9/24', 150, 35, 3],
             ['10/1', 260, 45, 4],
@@ -18,8 +18,8 @@
             legend: { position: 'bottom' }
         };
 
-        console.log(document.getElementById('roles-chart'));
-        var chart = new google.visualization.LineChart(document.getElementById('roles-chart'));
+        var element = $('#roles-chart')[0];
+        var chart = new google.visualization.LineChart(element);
 
         chart.draw(data, options);
     }
