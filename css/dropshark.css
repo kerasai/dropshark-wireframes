@@ -137,3 +137,9 @@ body {
 #site-jump select {
     width: 100%;
 }
+
+#roles-chart .chart {
+    min-height: 200px;
+    overflow: hidden;
+    width: 100%;
+}
