@@ -3,6 +3,11 @@
     google.setOnLoadCallback(drawCharts);
 
     function drawCharts() {
+        drawRoles();
+        drawSessions();
+    }
+
+    function drawRoles() {
         var data = google.visualization.arrayToDataTable([
             ['Date', 'Total', 'Editor', 'Admin'],
             ['9/17', 100, 10, 3],
@@ -19,6 +24,36 @@
         };
 
         var element = $('#roles-chart')[0];
+        var chart = new google.visualization.LineChart(element);
+
+        chart.draw(data, options);
+    }
+
+    function drawSessions() {
+        var data = google.visualization.arrayToDataTable([
+            ['Time', 'Sessions'],
+            ['12:45p', 50],
+            ['1:00p', 50],
+            ['1:15p', 100],
+            ['1:30p', 175],
+            ['1:45p', 175],
+            ['2:00p', 150],
+            ['2:15p', 125],
+            ['2:30p', 125],
+            ['2:45p', 75],
+            ['3:00p', 100],
+            ['3:15p', 75],
+            ['3:30p', 50],
+            ['3:45p', 50],
+        ]);
+
+        var options = {
+            title: 'Sessions',
+            curveType: 'function',
+            legend: { position: 'bottom' }
+        };
+
+        var element = $('#sessions-chart')[0];
         var chart = new google.visualization.LineChart(element);
 
         chart.draw(data, options);
