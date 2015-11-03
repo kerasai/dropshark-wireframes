@@ -6,6 +6,8 @@
         drawRamChart();
         drawDiskChart();
         drawLoadChart();
+        drawOpcacheChart();
+        drawMemcacheChart();
     }
 
     function drawRamChart() {
@@ -61,6 +63,44 @@
 
         var element = $('#load-chart')[0];
         var chart = new google.visualization.ColumnChart(element);
+
+        chart.draw(data, options);
+    }
+
+    function drawOpcacheChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Type', 'Allocation'],
+            ['Free', 38.5],
+            ['Used', 57.4],
+        ]);
+
+        var options = {
+            pieHole: 0.4,
+            legend: 'none',
+            pieSliceText: 'none',
+        };
+
+        var element = $('#opcache-chart')[0];
+        var chart = new google.visualization.PieChart(element);
+
+        chart.draw(data, options);
+    }
+
+    function drawMemcacheChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Type', 'Allocation'],
+            ['Free', 2.38],
+            ['Used', 5.62],
+        ]);
+
+        var options = {
+            pieHole: 0.4,
+            legend: 'none',
+            pieSliceText: 'none',
+        };
+
+        var element = $('#memcache-chart')[0];
+        var chart = new google.visualization.PieChart(element);
 
         chart.draw(data, options);
     }
