@@ -3,23 +3,42 @@
     google.setOnLoadCallback(drawCharts);
 
     function drawCharts() {
+        drawSessionsChart();
         drawRamChart();
         drawDiskChart();
         drawLoadChart();
     }
 
+    function drawSessionsChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Type', 'Value'],
+            ['Current', 26],
+            ['Max', 178],
+        ]);
+
+        var options = {
+            legend: 'none',
+        };
+
+        var element = $('#sessions-chart')[0];
+        var chart = new google.visualization.ColumnChart(element);
+
+        chart.draw(data, options);
+    }
+
     function drawRamChart() {
         var data = google.visualization.arrayToDataTable([
             ['Type', 'Allocation'],
-            ['Used', 878],
-            ['Free', 1123],
+            ['Used', 868],
             ['Cached', 209],
+            ['Free', 900],
         ]);
 
         var options = {
             pieHole: 0.4,
             legend: 'none',
             pieSliceText: 'none',
+            colors: ['#cc060c', '#f2930c', '#4b9609']
         };
 
         var element = $('#ram-chart')[0];
@@ -31,14 +50,15 @@
     function drawDiskChart() {
         var data = google.visualization.arrayToDataTable([
             ['Type', 'Allocation'],
-            ['Free', 33.11],
             ['Used', 2.29],
+            ['Free', 33.11],
         ]);
 
         var options = {
             pieHole: 0.4,
             legend: 'none',
             pieSliceText: 'none',
+            colors: ['#cc060c', '#4b9609']
         };
 
         var element = $('#disk-chart')[0];
