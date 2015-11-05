@@ -2,8 +2,8 @@
 
     var colors = {
         general: ['#0cab41', '#0c76ab', '#ab0c76', '#ab410c'],
-        status: ['#cc060c', '#f2930c', '#4b9609'],
-        usage: ['#cc060c', '#4b9609'],
+        status: ['#cc060c', '#f2930c', '#0cab41'],
+        usage: ['#cc060c', '#0cab41'],
     };
 
     google.setOnLoadCallback(drawCharts);
