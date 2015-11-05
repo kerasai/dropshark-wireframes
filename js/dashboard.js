@@ -9,10 +9,50 @@
     google.setOnLoadCallback(drawCharts);
 
     function drawCharts() {
+        drawContentTypeChart();
+        drawNewUsersChart();
         drawSessionsChart();
         drawRamChart();
         drawDiskChart();
         drawLoadChart();
+    }
+
+    function drawContentTypeChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Type', 'Count'],
+            ['Article', 6],
+            ['Event', 2],
+        ]);
+
+        var options = {
+            pieHole: 0.6,
+            legend: 'none',
+            pieSliceText: 'none',
+            colors: colors.general,
+        };
+
+        var element = $('#content-type-chart')[0];
+        var chart = new google.visualization.PieChart(element);
+
+        chart.draw(data, options);
+    }
+
+    function drawNewUsersChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Type', 'Count'],
+            ['Administrator', 1],
+            ['Editor', 4],
+        ]);
+
+        var options = {
+            legend: 'none',
+            colors: colors.general,
+        };
+
+        var element = $('#new-users-chart')[0];
+        var chart = new google.visualization.ColumnChart(element);
+
+        chart.draw(data, options);
     }
 
     function drawSessionsChart() {
