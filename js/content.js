@@ -10,6 +10,7 @@
 
     function drawCharts() {
         drawPostedContentChart();
+        drawContentStatusChart();
         drawContentTypeChart();
         drawContentRoleChart();
     }
@@ -38,6 +39,26 @@
         chart.draw(data, options);
     }
 
+    function drawContentStatusChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Status', 'Count'],
+            ['Published', 998],
+            ['Un-published', 68],
+        ]);
+
+        var options = {
+            pieHole: 0.6,
+            legend: 'none',
+            pieSliceText: 'none',
+            colors: colors.general,
+        };
+
+        var element = $('#content-status-chart')[0];
+        var chart = new google.visualization.PieChart(element);
+
+        chart.draw(data, options);
+    }
+
     function drawContentTypeChart() {
         var data = google.visualization.arrayToDataTable([
             ['Date', 'Article', 'Event', 'Page'],
@@ -61,7 +82,6 @@
 
         chart.draw(data, options);
     }
-
 
     function drawContentRoleChart() {
         var data = google.visualization.arrayToDataTable([
