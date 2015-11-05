@@ -9,8 +9,33 @@
     google.setOnLoadCallback(drawCharts);
 
     function drawCharts() {
+        drawPostedContentChart();
         drawContentTypeChart();
         drawContentRoleChart();
+    }
+
+    function drawPostedContentChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Article', 'Event', 'Page'],
+            ['10/9', 7, 2, 0],
+            ['10/10', 7, 4, 0],
+            ['10/11', 9, 1, 1],
+            ['10/12', 13, 7, 0],
+            ['10/13', 8, 6, 0],
+            ['10/14', 10, 0, 0],
+            ['10/15', 12, 0, 0],
+        ]);
+
+        var options = {
+            legend: 'bottom',
+            isStacked: true,
+            colors: colors.general,
+        };
+
+        var element = $('#content-post-chart')[0];
+        var chart = new google.visualization.LineChart(element);
+
+        chart.draw(data, options);
     }
 
     function drawContentTypeChart() {
