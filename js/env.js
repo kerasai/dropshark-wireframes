@@ -1,5 +1,11 @@
 (function ($) {
 
+    var colors = {
+        general: ['#0cab41', '#0c76ab', '#ab0c76', '#ab410c'],
+        status: ['#cc060c', '#f2930c', '#4b9609'],
+        usage: ['#cc060c', '#4b9609'],
+    };
+
     google.setOnLoadCallback(drawCharts);
 
     function drawCharts() {
@@ -30,7 +36,7 @@
             legend: 'none',
             isStacked: true,
             hAxis: { slantedText: true },
-            colors: ['#cc060c', '#f2930c', '#4b9609']
+            colors: colors.status
         };
 
         var element = $('#ram-chart')[0];
@@ -50,7 +56,7 @@
             pieHole: 0.4,
             legend: 'none',
             pieSliceText: 'none',
-            colors: ['#cc060c', '#4b9609']
+            colors: colors.usage
         };
 
         var element = $('#disk-chart')[0];
@@ -75,7 +81,8 @@
 
         var options = {
             legend: 'none',
-            hAxis: { slantedText: true }
+            hAxis: { slantedText: true },
+            colors: colors.general
         };
 
         var element = $('#load-chart')[0];
@@ -95,7 +102,7 @@
             pieHole: 0.4,
             legend: 'none',
             pieSliceText: 'none',
-            colors: ['#cc060c', '#4b9609']
+            colors: colors.usage
         };
 
         var element = $('#swap-chart')[0];
@@ -116,7 +123,8 @@
 
         var options = {
             legend: 'none',
-            hAxis: { slantedText: true }
+            hAxis: { slantedText: true },
+            colors: colors.general,
         };
 
         var element = $('#swap-activity-chart')[0];
@@ -136,7 +144,7 @@
             pieHole: 0.4,
             legend: 'none',
             pieSliceText: 'none',
-            colors: ['#cc060c', '#4b9609']
+            colors: colors.usage
         };
 
         var element = $('#opcache-chart')[0];
@@ -156,7 +164,7 @@
             pieHole: 0.4,
             legend: 'none',
             pieSliceText: 'none',
-            colors: ['#cc060c', '#4b9609']
+            colors: colors.usage
         };
 
         var element = $('#memcache-chart')[0];

@@ -1,5 +1,11 @@
 (function ($) {
 
+    var colors = {
+        general: ['#0cab41', '#0c76ab', '#ab0c76', '#ab410c'],
+        status: ['#cc060c', '#f2930c', '#4b9609'],
+        usage: ['#cc060c', '#4b9609'],
+    };
+
     google.setOnLoadCallback(drawCharts);
 
     function drawCharts() {
@@ -19,7 +25,8 @@
         ]);
 
         var options = {
-            legend: { position: 'none' }
+            legend: { position: 'none' },
+            colors: colors.general,
         };
 
         var element = $('#users-chart')[0];
@@ -41,7 +48,8 @@
         var options = {
             title: 'Users by Role',
             curveType: 'function',
-            legend: { position: 'bottom' }
+            legend: { position: 'bottom' },
+            colors: colors.general,
         };
 
         var element = $('#roles-chart')[0];
@@ -71,7 +79,8 @@
         var options = {
             title: 'Sessions',
             curveType: 'function',
-            legend: { position: 'bottom' }
+            legend: { position: 'bottom' },
+            colors: colors.general,
         };
 
         var element = $('#sessions-chart')[0];

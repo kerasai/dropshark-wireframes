@@ -1,5 +1,11 @@
 (function ($) {
 
+    var colors = {
+        general: ['#0cab41', '#0c76ab', '#ab0c76', '#ab410c'],
+        status: ['#cc060c', '#f2930c', '#4b9609'],
+        usage: ['#cc060c', '#4b9609'],
+    };
+
     google.setOnLoadCallback(drawCharts);
 
     function drawCharts() {
@@ -18,6 +24,7 @@
 
         var options = {
             legend: 'none',
+            colors: colors.general,
         };
 
         var element = $('#sessions-chart')[0];
@@ -35,10 +42,10 @@
         ]);
 
         var options = {
-            pieHole: 0.4,
+            pieHole: 0.6,
             legend: 'none',
             pieSliceText: 'none',
-            colors: ['#cc060c', '#f2930c', '#4b9609']
+            colors: colors.status,
         };
 
         var element = $('#ram-chart')[0];
@@ -55,10 +62,10 @@
         ]);
 
         var options = {
-            pieHole: 0.4,
+            pieHole: 0.6,
             legend: 'none',
             pieSliceText: 'none',
-            colors: ['#cc060c', '#4b9609']
+            colors: colors.usage,
         };
 
         var element = $('#disk-chart')[0];
@@ -77,6 +84,7 @@
 
         var options = {
             legend: 'none',
+            colors: colors.general,
         };
 
         var element = $('#load-chart')[0];
