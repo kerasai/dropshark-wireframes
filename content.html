@@ -73,6 +73,77 @@
         <div id="content" class="container">
 
             <div class="row">
+                <div class="col-md-12">
+                    <div class="pane">
+                        <h3 class="pane-title">Content by Type</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <table class="table">
+                                    <tr>
+                                        <th>Type</th><th>Count</th><th>%</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Article</td><td>812</td><td>76.1%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Event</td><td>237</td><td>22.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Page</td><td>17</td><td>1.6%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total</td><td>1066</td><td>100%</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <div id="content-type-chart">
+                                    <div class="chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="pane">
+                        <h3 class="pane-title">Content by Role</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <table class="table">
+                                    <tr>
+                                        <th>Role</th><th>Count</th><th>%</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Anonymous</td><td>84</td><td>8.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Authenticated</td><td>982</td><td>92.1%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Administrator</td><td>76</td><td>7.1%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Editor</td><td>714</td><td>67.0%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total</td><td>1066</td><td>100%</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <div id="content-role-chart">
+                                    <div class="chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
                 <div class="col-md-6">
                     <div class="pane">
                         ABC
@@ -111,5 +182,11 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script>
+        google.load('visualization', '1', {'packages':['corechart']});
+    </script>
+
+    <script src="js/content.js"></script>
 </body>
 </html>
