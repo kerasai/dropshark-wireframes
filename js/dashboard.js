@@ -9,9 +9,9 @@
     google.setOnLoadCallback(drawCharts);
 
     function drawCharts() {
-        drawContentTypeChart();
-        drawNewUsersChart();
-        drawSessionsChart();
+        //drawContentTypeChart();
+        //drawNewUsersChart();
+        //drawSessionsChart();
         drawRamChart();
         drawDiskChart();
         drawLoadChart();

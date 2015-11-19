@@ -73,47 +73,27 @@
         <div id="content" class="container">
 
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-8">
                     <div class="pane">
-                        <h3 class="pane-title">New Content (24 hrs)</h3>
-                        <div id="content-type-chart">
-                            <div class="chart"></div>
-                        </div>
+                        <h3 class="pane-title">Summary</h3>
                         <table class="table">
                             <tr>
-                                <th>Type</th><th>Count</th><th>%</th>
+                                <th>Status</th><th>Type</th><th>Info</th>
                             </tr>
                             <tr>
-                                <td>Article</td><td>6</td><td>75.0%</td>
+                                <td><span class="glyphicon glyphicon-ok"></span></td><td>Front Page</td><td>HTTP status 200, 214ms response time</td>
                             </tr>
                             <tr>
-                                <td>Event</td><td>2</td><td>25.0%</td>
+                                <td><span class="glyphicon glyphicon-ok"></td><td>Server Vitals</td><td>Within normal ranges</td>
                             </tr>
                             <tr>
-                                <td>Total</td><td>8</td><td>100%</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="pane">
-                        <h3 class="pane-title">New Users</h3>
-                        <div id="new-users-chart">
-                            <div class="chart"></div>
-                        </div>
-                        <table class="table">
-                            <tr>
-                                <th>Role</th><th>Count</th><th>%</th>
+                                <td><span class="glyphicon glyphicon-ok"></td><td>Memcached</td><td>70.3% used, 90.3% hit rate</td>
                             </tr>
                             <tr>
-                                <td>Administrator</td><td>1</td><td>25.0%</td>
+                                <td><span class="glyphicon glyphicon-ok"></span></td><td>PHP OpCache</td><td>59.8% used, 99.9% hit rate</td>
                             </tr>
                             <tr>
-                                <td>Editor</td><td>4</td><td>75.0%</td>
-                            </tr>
-                            <tr>
-                                <td>Total</td><td>4</td><td>100%</td>
+                                <td><span class="glyphicon glyphicon-warning-sign"></span></td><td>Status Report</td><td>2 errors, 25 OK</td>
                             </tr>
                         </table>
                     </div>
@@ -122,8 +102,8 @@
                 <div class="col-md-4">
                     <div class="pane">
                         <h3 class="pane-title">Active Sessions</h3>
-                        <div id="sessions-chart">
-                            <div class="chart"></div>
+                        <div class="big-stat">
+                            26
                         </div>
                         <table class="table">
                             <tr>

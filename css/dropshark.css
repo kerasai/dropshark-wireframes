@@ -143,3 +143,9 @@ div.chart {
     overflow: hidden;
     width: 100%;
 }
+
+.big-stat {
+    font-size: 96px;
+    font-weight: bold;
+    text-align: center;
+}
