@@ -154,3 +154,7 @@ div.chart {
     font-weight: bold;
     text-align: center;
 }
+
+.form-actions {
+    margin: 1em 0;
+}
